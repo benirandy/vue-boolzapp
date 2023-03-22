@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boolzapp</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+
+        <div id="app">
+
+            <div class="contatti-wrapper">
+
+                <div class="utente-corrente d-flex">
+
+                    <div class="me d-flex">
+                        <img class="avatar" :src="me.avartar" :alt="me.name" />
+                        <h3>{{me.name}}</h3>
+                    </div>
+
+                    <div class="icon"> <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="alarme">
+
+                </div>
+
+                <div class="cerca">
+                    <input type="text" v-model="search" placeholder="cerca">
+                </div>
+
+                <div class="contatti">
+
+                    <div v-for="contatto in contacts" class="contatto">
+                        <img class="avatar" :src="contatto.avartar" :alt="contatto.name" />
+                        <h3>{{contatto.name}}</h3>
+                    </div>
+
+                    <!--  <div class="contatto">
+                        <img class="avatar" src="./img/avatar_2.jpg" alt="nome" />
+                        <h3>Giuseppe G</h3>
+                    </div>
+
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_3.jpg" alt="nome" />
+                        <h3>Emmanu M</h3>
+                    </div>
+
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_4.jpg" alt="nome" />
+                        <h3>Alassio G</h3>
+                    </div>
+
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_5.jpg" alt="nome" />
+                        <h3>All A</h3>
+                    </div>
+                    
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_6.jpg" alt="nome" />
+                        <h3>Maga J</h3>
+                    </div>
+
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_7.jpg" alt="nome" />
+                        <h3>Gas C</h3>
+                    </div>
+
+                    <div class="contatto">
+                        <img class="avatar" src="./img/avatar_8.jpg" alt="nome" />
+                        <h3>Silviu G</h3>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+            <div class="messaggi-wrapper">
+
+                <div class="contatti-corrente d-flex">
+                    <div class="contattoii d-flex">
+                        <img class="avatar" :src="me.avartar" :alt="me.name" />
+                        <h3>{{me.name}}</h3>
+                    </div>
+
+                    <div class="icon"> <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                    </div>
+
+                </div>
+
+                <div class="messaggi">
+
+                    <div class="sms verdi">
+                        Inviato sms
+                    </div>
+
+                    <div class="sms bianchi">
+                        Ricevuto sms
+                    </div>
+
+
+                </div>
+
+                <div class="nuovi-messaggi">
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+
+</html>
